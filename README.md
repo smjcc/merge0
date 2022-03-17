@@ -1,7 +1,7 @@
 merge0: Bytewise merge two incomplete files
 -------------------------------------------
 
-merge0 [-hqbsefpv?] <file1> <file2>
+merge0 [-hqbsefpv?] \<file1\> \<file2\>
 
 merge0 bytewise merges two files' content if they differ only where one byte is 0 (NULL)
 
