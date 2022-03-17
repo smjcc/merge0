@@ -1,0 +1,64 @@
+.TH MERGE0 "1" "February 2022" "merge0    merge incomplete files" "User Commands"
+.SH NAME
+merge0 \- Bytewise merge two incomplete files
+.SH SYNOPSIS
+.B merge0
+[\fI-hqbsefpv?\fR] <\fIfile1\fR> <\fIfile2\fR>
+.\"[\fI,OPTION\/\fR]... [\fI\,FILE\/\fR]...
+.SH DESCRIPTION
+merge0 bytewise merges two files' content if they differ only where one byte is 0 (\fBNULL\fR)
+.HP
+.PD 0
+.TP 10
+If the content of the two files differ only where one of the differing bytes at each offset is zero, then they are bytewise merged by overwriting zeros in one file with the non\-zero data of the other file.
+.SH OPTIONS
+.B \fB\-h \-?\fR print usage help
+.HP
+.B \fB\-q\fR report only when files are changed
+.HP
+\fB\-b\fR show only basenames in messages
+.HP
+\fB\-s\fR require files to be of same size
+.HP
+\fB\-e\fR allow appending to empty files.
+.HP
+\fB\-f\fR force writing to files open by other programs
+.HP
+\fB\-p\fR pretend, but change no files
+.HP
+\fB\-v\fR show version number
+.HP
+.SH "RETURN CODES"
+.HP
+\fB01\fR \- usage/help
+.HP
+\fB02\fR \- option error
+.HP
+\fB03\fR \- not exactly two files
+.HP
+\fB04\fR \- filesystem error
+.HP
+\fB05\fR \- not regular file
+.HP
+\fB06\fR \- files are hard linked
+.HP
+\fB07\fR \- files are different length
+.HP
+\fB08\fR \- empty file
+.HP
+\fB09\fR \- files have different non\-zero data
+.HP
+\fB66\fR \- demonic influence
+.HP
+.HP
+.SH NOTES
+Useful for merging two incomplete copies of the same file, where the missing data is zero or "sparse".
+.HP
+.HP
+Exactly TWO files must be on the command line.
+.HP
+.HP
+By default, the smaller file is presumed to have NULL data beyond it's end.
+.HP
+.SH COPYRIGHT
+merge0 is copyright (C) 2019-2022 by Scott Jennings

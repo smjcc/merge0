@@ -1,0 +1,2 @@
+add counter of total number of byte offsets which already contained identical non-zero data in both files.
+Then add switch to only merge if more than N non-zero bytes already in common. (error if -e also invoked)
