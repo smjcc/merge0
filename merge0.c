@@ -18,7 +18,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#define VERSION "0.1.0"
+#define VERSION "0.1.1"
 
 #define _GNU_SOURCE
 
