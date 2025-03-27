@@ -2,7 +2,7 @@
 
    Bytewise merge two files' content if they differ only when one byte is NULL
 
-   copyright (c) 2019-2022 Scott Jennings - All rights reserved as per GPLv3+:
+   copyright (c) 2019-2024 Scott Jennings - All rights reserved as per GPLv3+:
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#define VERSION "0.1.1"
+#define VERSION "0.1.2pre"
 
 #define _GNU_SOURCE
 
